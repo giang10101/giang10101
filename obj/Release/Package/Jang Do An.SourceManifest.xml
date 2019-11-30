@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="D:\Google Drive\UEL\K71411 HK5\Web1 practice\Do_An_Web1\Jang Do An\Jang Do An\obj\Release\Package\PackageTmp" />
+  <setAcl path="D:\Google Drive\UEL\K71411 HK5\Web1 practice\Do_An_Web1\Jang Do An\Jang Do An\obj\Release\Package\PackageTmp" setAclResourceType="Directory" />
+  <setAcl path="D:\Google Drive\UEL\K71411 HK5\Web1 practice\Do_An_Web1\Jang Do An\Jang Do An\obj\Release\Package\PackageTmp" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

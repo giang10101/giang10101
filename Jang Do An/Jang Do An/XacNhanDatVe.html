@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Xác nhận đặt vé</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style type="text/css">
+
+        @import url(mainstyle.css);
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div class="divheader" style="width:17%; padding-top: 0px; height:67px ">
+                <a href="HomePage.html"> <img style="height:60px" src="images/Logo co mau.jpg" /></a>
+            </div>
+
+            <div class="divheader">
+                <a href="HomePage.html" style="color: #fff3d2;"> TRANG CHỦ</a>
+            </div>
+
+            <div class="divheader">
+                <a href="GioiThieu.html" style="color: #fff3d2;"> GIỚI THIỆU</a>
+            </div>
+
+            <div class="divheader">
+                <a href="HuongDanBay.html" style="color: #fff3d2;"> KINH NGHIỆM BAY</a>
+            </div>
+
+            <div class="divheader">
+                <a href="#" style="color: #fff3d2;"> CẨM NANG</a>
+            </div>
+
+            <div class="divheader" style="width:19%; padding-top: 10px; height:57px">
+                <a href="tel:+84334447979">
+                    <img style="height:50px" src="images/callnow6.png" />
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <div id="KhungHinhMayBay">
+        <!--tiến trình
+        <div style="float:none; text-align:center">
+
+            <img src="Images/B4.PNG" height="50" />
+        </div>
+            -->
+        <div id="XacNhanDatVe" style="margin-bottom:700px;margin-top:80px; display:block; float:none">
+            <div id="thongtinchuyenbay">
+                <div class="tieudeXNDV">Thông tin chuyến bay</div>
+                <div class="chuyenbay">
+                    <div style="float:left">Chiều đi: &nbsp; </div>
+                    <div style="float:left"> Hồ Chí Minh (SGN) </div>
+                    <div style="float:left;padding:0px 4px;"><img src="images/ico-fly-di.png" /></div>
+                    <div style="float:left"> Buôn Ma Thuột (BMW)</div>
+                    <div style="float:right">Ngày: 20/10/2020</div>
+                    <br />
+                    <div style="float:left"><img src="images/smVN.gif" /><!--img Hãng--></div>
+                    <div style="float:left;margin:0px 3%; padding:0px 3%; color:#B1173C"><!--Số hiệu chuyến bay-->VNA2110</div>
+                    <div style="float:left; margin:0px 3%; padding:0px 3%">11:00 - 12:00 <!--Thời gian bay--></div>
+                    <div class="color" style="float:right"> 1.199.999 VNĐ</div>
+
+                    <br />
+                    <hr style="margin: 10px 2px;" />
+                    <div style="float:left">Chiều về: &nbsp; </div>
+                    <div style="float:left">Buôn Ma Thuột (BMW) </div>
+                    <div style="float:left;padding:0px 4px;"><img src="images/ico-fly-den.png" /></div>
+                    <div style="float:left"> Hồ Chí Minh (SGN)</div>
+                    <div style="float:right">Ngày: 21/10/2020</div>
+                    <br />
+                    <div style="float:left"><img src="images/smVN.gif" /><!--img Hãng--></div>
+                    <div style="float:left;margin:0px 3%; padding:0px 3%; color:#B1173C"><!--Số hiệu chuyến bay-->VNA2110</div>
+                    <div style="float:left; margin:0px 3%; padding:0px 3%">11:00 - 12:00 <!--Thời gian bay--></div>
+                    <div class="color" style="float:right"> 1.199.999 VNĐ</div>
+
+                </div>
+            </div>
+            <div id="thongtinthanhtoan">
+                <div class="tieudeXNDV">Thông tin thanh toán</div>
+                <div class="chuyenbay">
+                    <div style="float:left"><b>Giá vé: </b></div> <div style="float:left; padding-left:15px">1 Người</div>
+                    <div class="color" style="float:right">3.999.998 VNĐ</div>
+                    <br />
+                    <div style="float:left"><b>Giá hành lý:</b></div>
+                    <div class="color" style="float:right"> 200.000 VNĐ</div>
+                    <br />
+                </div>
+                <div style="float:left; width:337px" id="tonggia">
+                    <b>Tổng giá </b> <i>(đã bao gồm VAT): </i>
+                    <div style="float:right;">
+                        <b>
+                            <input onclick="XacNhan()" name="Nntongcong" id="Nntongcong"
+                                   style="border:none;background:none;width:140px; text-align:center;color:white;font-size:16px;" />
+                        </b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script type="text/javascript">
+            function getUrlVars() {
+                var vars = {};
+                var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+                    function (m, key, value) { vars[key] = value; }
+                );
+                return vars;
+            }
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            var Ntongcong = url.searchParams.get("Ntongcong");
+            document.getElementById("Nntongcong").value = Ntongcong;
+        </script>
+
+        <footer>
+            <div class="infoframe">
+                <div class="links">
+                    <div class="col" style="background-image:url('/Images/about-us.png')">
+                        <p class="title">VỀ CHÚNG TÔI</p>
+                        <ul>
+                            <li>
+                                <a href="/GioiThieu.html" class="tx-link" title="Giới thiệu">
+                                    Giới thiệu
+                                </a>
+                            </li>
+                            <li>
+                                <a tel="+84334447979" class="tx-link" title="Liên hệ">
+                                    Liên hệ
+                                </a>
+                            </li>
+                            <li class="hide-small">
+                                <a href="/DieuKhoan.html" class="tx-link" title="Điều khoản dịch vụ">
+                                    Điều khoản dịch vụ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="tx-link" title="Đóng góp ý kiến">
+                                    Đóng góp ý kiến
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col" style="background-image:url('/Images/Instruction.png')">
+                        <p class="title">HƯỚNG DẪN</p>
+                        <ul>
+                            <li>
+                                <a href="/HuongDanDatVe.html" class="tx-link" title="Hướng dẫn đặt vé máy bay">
+                                    Hướng dẫn đặt vé máy bay
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/HuongDanBay.html" class="tx-link" title="Hướng dẫn bay">
+                                    Hướng dẫn bay
+                                </a>
+                            </li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                    </div>
+                    <div class="col" style="background-image:url('/Images/Handbook.png')">
+                        <p class="title">CẨM NANG</p>
+                        <ul>
+                            <li>
+                                <a href="/" class="tx-link">
+                                    &nbsp;
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="tx-link">
+                                    &nbsp;
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/" class="tx-link">
+                                    &nbsp;
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="thongtin">
+                <div class="wrap">
+                    <p class="com-name">QQ INTERNATIONAL GROUP</p>
+                    <p>Giấy CNĐKDN: 0317135879 cấp ngày 18/12/2017</p>
+                    <p>Nơi cấp: Phòng Đăng ký kinh doanh - Sở Kế hoạch và Đầu tư TP.HCM</p>
+                    <p> Địa chỉ: Tầng 61, Tòa nhà  Bitexco, Số 2, đường Hải Triều, Quận 1, TP.HCM.</p>
+
+                </div>
+            </div>
+
+        </footer>
+</body>
+</html>

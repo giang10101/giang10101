@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Danh Sách Chuyến Bay</title>
+    <style type="text/css">
+        tr, td {
+            border-bottom:1px solid #EEEEEE;            
+        }
+        input{
+            background-color:#B1173C;
+            color:#FFF3D2;
+            border:none;
+            
+        }
+    </style>
+    <script src="angular.min.js"></script>
+    <script>
+        var app = angular.module("QQApp", [])
+         app.controller("QQController", function ($scope, $http) {
+            $http({
+                method: "GET",
+                url: "Danhsachchuyenbay.json"
+            }).then(function mySucces(respone) {
+                $scope.chuyenbay = respone.data
+            }, function myError(respone) {
+                    $scope.dataError = respone.statusText
+                }
+                )
+        })
+    </script>
+</head>
+<body ng-app="QQApp" ng-controller="QQController" id="bangdschuyenbay">
+    <table  border="0" align="center" cellpadding="0" cellspacing="0" style="width:100%; text-align:center;line-height:35px;">
+        <tr>
+            <td colspan="5" height="40px" style="background-color:#B1173C; color:#FFF3D2; vertical-align:middle;text-align:left;">
+                &nbsp;&nbsp; Chiều đi: Hà Nội (HAN) <img src="Images/ico-fly-den.png" /> Hồ Chí Minh (SGN) -
+            </td>
+        </tr>
+        <tr>
+            <th>Hãng</th>
+            <th>Mã chuyến bay</th>
+            <th>Thời gian bay</th>
+            <th>Giá</th>
+            <th>&nbsp;</th>
+        </tr>       
+     <tr ng-repeat="cb in chuyenbay">
+        <td><img src="{{cb.MaChuyenBay[0].Logo}}" /></td>
+        <td>{{cb.MaChuyenBay[0].Ma}}</td>
+        <td>{{cb.MaChuyenBay[0].ThoiGianBay}}</td>
+        <td>{{cb.MaChuyenBay[0].Gia}}</td>
+        <td><input type="button" value="Chọn" /></td>
+    </tr>
+    <tr ng-repeat="cb in chuyenbay">
+        <td><img src="{{cb.MaChuyenBay[1].Logo}}" /></td>
+        <td>{{cb.MaChuyenBay[1].Ma}}</td>
+        <td>{{cb.MaChuyenBay[1].ThoiGianBay}}</td>
+        <td>{{cb.MaChuyenBay[1].Gia}}</td>
+        <td><input type="button" value="Chọn" /></td>
+    </tr>
+    <tr ng-repeat="cb in chuyenbay">
+        <td><img src=" {{cb.MaChuyenBay[2].Logo}}" /></td>
+        <td>{{cb.MaChuyenBay[2].Ma}}</td>
+        <td>{{cb.MaChuyenBay[2].ThoiGianBay}}</td>
+        <td>{{cb.MaChuyenBay[2].Gia}}</td>
+        <td><input type="button" value="Chọn" /></td>
+    </tr>
+    <tr ng-repeat="cb in chuyenbay">
+        <td><img src=" {{cb.MaChuyenBay[3].Logo}}"/></td>
+        <td>{{cb.MaChuyenBay[3].Ma}}</td>
+        <td>{{cb.MaChuyenBay[3].ThoiGianBay}}</td>
+        <td>{{cb.MaChuyenBay[3].Gia}}</td>
+        <td><input type="button" value="Chọn" /></td>
+    </tr>
+    <tr ng-repeat="cb in chuyenbay">
+        <td><img src=" {{cb.MaChuyenBay[4].Logo}}" /></td>
+        <td>{{cb.MaChuyenBay[4].Ma}}</td>
+        <td>{{cb.MaChuyenBay[4].ThoiGianBay}}</td>
+        <td>{{cb.MaChuyenBay[4].Gia}}</td>
+        <td><input type="button" value="Chọn" /></td>
+    </tr>
+    <tr ng-repeat="cb in chuyenbay">
+        <td><img src=" {{cb.MaChuyenBay[5].Logo}}" /></td>
+        <td>{{cb.MaChuyenBay[5].Ma}}</td>
+        <td>{{cb.MaChuyenBay[5].ThoiGianBay}}</td>
+        <td>{{cb.MaChuyenBay[5].Gia}}</td>
+        <td><input type="button" value="Chọn" /></td>
+    </tr>    
+        <tr>
+            <td colspan="5" height="35px" style="background-color:#B1173C; color:#FFF3D2; vertical-align:middle;text-align:left;">
+                &nbsp;&nbsp; Chiều về: Hồ Chí Minh (SGN) <img src="Images/ico-fly-den.png" /> Hà Nội (HAN) -
+            </td>
+        </tr>
+        <tr>
+            <th>Hãng</th>
+            <th>Mã chuyến bay</th>
+            <th>Thời gian bay</th>
+            <th>Giá</th>
+            <th>&nbsp;</th>
+        </tr>
+        <tr ng-repeat="cb in chuyenbay">
+            <td><img src=" {{cb.MaChuyenBay[6].Logo}}" /></td>
+            <td>{{cb.MaChuyenBay[6].Ma}}</td>
+            <td>{{cb.MaChuyenBay[6].ThoiGianBay}}</td>
+            <td>{{cb.MaChuyenBay[6].Gia}}</td>
+            <td><input type="button" value="Chọn" /></td>
+        </tr>
+        <tr ng-repeat="cb in chuyenbay">
+            <td><img src=" {{cb.MaChuyenBay[7].Logo}}" /></td>
+            <td>{{cb.MaChuyenBay[7].Ma}}</td>
+            <td>{{cb.MaChuyenBay[7].ThoiGianBay}}</td>
+            <td>{{cb.MaChuyenBay[7].Gia}}</td>
+            <td><input type="button" value="Chọn" /></td>
+        </tr>
+        <tr ng-repeat="cb in chuyenbay">
+            <td><img src=" {{cb.MaChuyenBay[8].Logo}}" /></td>
+            <td>{{cb.MaChuyenBay[8].Ma}}</td>
+            <td>{{cb.MaChuyenBay[8].ThoiGianBay}}</td>
+            <td>{{cb.MaChuyenBay[8].Gia}}</td>
+            <td><input type="button" value="Chọn" /></td>
+        </tr>
+        <tr ng-repeat="cb in chuyenbay">
+            <td><img src=" {{cb.MaChuyenBay[9].Logo}}" /></td>
+            <td>{{cb.MaChuyenBay[9].Ma}}</td>
+            <td>{{cb.MaChuyenBay[9].ThoiGianBay}}</td>
+            <td>{{cb.MaChuyenBay[9].Gia}}</td>
+            <td><input type="button" value="Chọn" /></td>
+        </tr>
+        <tr ng-repeat="cb in chuyenbay">
+            <td><img src=" {{cb.MaChuyenBay[10].Logo}}" /></td>
+            <td>{{cb.MaChuyenBay[10].Ma}}</td>
+            <td>{{cb.MaChuyenBay[10].ThoiGianBay}}</td>
+            <td>{{cb.MaChuyenBay[10].Gia}}</td>
+            <td><input type="button" value="Chọn" /></td>
+        </tr>
+        <tr ng-repeat="cb in chuyenbay">
+            <td><img src=" {{cb.MaChuyenBay[11].Logo}}" /></td>
+            <td>{{cb.MaChuyenBay[11].Ma}}</td>
+            <td>{{cb.MaChuyenBay[11].ThoiGianBay}}</td>
+            <td>{{cb.MaChuyenBay[11].Gia}}</td>
+            <td><input type="button" value="Chọn" /></td>
+        </tr>
+    </table>
+</body>
+</html>
